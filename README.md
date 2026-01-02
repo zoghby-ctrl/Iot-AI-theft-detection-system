@@ -1,6 +1,9 @@
-Smart Shelf: IoT Anti-Theft System with AI Verification
-Description
+# Smart Shelf: IoT Anti-Theft System
+### An AI-Powered Package Security Solution
+
+## Description
 An intelligent, battery-optimized security system designed to detect and prevent package theft. It utilizes a hybrid IoT architecture where an ESP32-CAM handles sensor fusion (Vibration + Ultrasonic + PIR) to detect physical tampering, while a Python Flask Server uses YOLOv8 AI to verify human presence in captured images, eliminating false alarms.
+
 
 Features
 Dual-Sensor Theft Detection: Combines a Vibration Sensor (to detect force) with an Ultrasonic Sensor (to verify item removal) to prevent false positives.
