@@ -50,3 +50,7 @@ Upload the code to the ESP32-CAM (Remember to ground GPIO 0 during upload).
 Disconnect the USB and power the board via the 5V/GND pins.
 
 Arming: The system will blink/beep to indicate startup, then enter Deep Sleep. It is now ready to detect theft.
+
+## Team
+**Team Leader:** **Ahmed El-Zoghby**
+*Managed a cohort of 28 students divided into Hardware, Software, and AI sub-teams to deliver this integrated system.*
