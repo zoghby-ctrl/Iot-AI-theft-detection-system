@@ -55,3 +55,6 @@ Arming: The system will blink/beep to indicate startup, then enter Deep Sleep. I
 **Team Leader:** **Ahmed El-Zoghby**
 
 *Managed a cohort of 28 students divided into Hardware, Software, and AI sub-teams to deliver this integrated system.*
+
+[Click here to watch the project demo](https://vimeo.com/1166679859?fl=ip&fe=ec)
+[Click here to watch the project demo](https://vimeo.com/1166677905?fl=ip&fe=ec)
