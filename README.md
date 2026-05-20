@@ -30,12 +30,10 @@ This project was developed at scale. As the **Technical Team Leader**, I archite
 3. **Real-Time Inference:** A Python backend intercepts the stream, applying a custom-configured YOLOv8 model to identify predefined physical threats or unauthorized entry.
 4. **Alerting Mechanism:** Upon positive detection thresholds, the system triggers subsequent security protocols (e.g., local alarms, network notifications).
 
-*Note: Insert a block diagram or flowchart image here if you have one.*
 ![System Architecture Diagram](link-to-your-image.png)
 
 ## 📸 Demonstration
 
-*Highly recommended: Add a GIF or a screenshot showing the YOLOv8 bounding boxes accurately detecting a person/object through the ESP32-CAM feed.*
 ![Demo GIF](link-to-your-demo.gif)
 
 ## 💻 Installation & Setup
