@@ -1,60 +1,81 @@
-# Smart Shelf: IoT Anti-Theft System
-### An AI-Powered Package Security Solution
+# 🛡️ IoT Anti-Theft Security System
 
-## Description
-An intelligent, battery-optimized security system designed to detect and prevent package theft. It utilizes a hybrid IoT architecture where an ESP32-CAM handles sensor fusion (Vibration + Ultrasonic + PIR) to detect physical tampering, while a Python Flask Server uses YOLOv8 AI to verify human presence in captured images, eliminating false alarms.
+A real-time, computer-vision-powered anti-theft and physical security system. This project integrates low-level hardware (ESP32-CAM) with state-of-the-art machine learning (YOLOv8) to provide instantaneous threat detection and alerting capabilities.
 
+## 🚀 Project Overview
 
-Features
-Dual-Sensor Theft Detection: Combines a Vibration Sensor (to detect force) with an Ultrasonic Sensor (to verify item removal) to prevent false positives.
+Traditional security systems rely on passive recording. This system was engineered to be proactive, utilizing an ESP32-CAM module to stream live video data to a centralized processing unit where YOLOv8 object detection algorithms analyze the feed in real-time. Upon detecting unauthorized entities or suspicious activities, the system immediately triggers automated alerts.
 
-AI Computer Vision: Automatically uploads captured photos to a local server where a YOLOv8 neural network scans for human presence.
+### 👑 Leadership & Team Management
 
-Deep Sleep Power Management: The system utilizes the ESP32's Deep Sleep mode and External Wake-up (ext1) pins to maximize battery life, only waking up when sensors are triggered.
+This project was developed at scale. As the **Technical Team Leader**, I architected the core system and successfully coordinated a cross-functional team of **28 developers and engineers**.
 
-Real-Time Alerts: Triggers a local physical buzzer for immediate deterrence and logs photographic evidence to the server instantly.
+**Key Management Responsibilities:**
 
-Event-Driven Architecture: Code execution is optimized to run only during active threat detection, keeping the processor dormant otherwise.
+- Directed the hardware-software integration pipeline.
+- Delegated tasks across embedded systems, machine learning, and backend sub-teams.
+- Managed version control, code reviews, and final deployment standards.
 
-Technology Stack
-Hardware: ESP32-CAM (AI-Thinker), SW-18010P Vibration Sensor, HC-SR501 PIR Sensor, HC-SR04 Ultrasonic Sensor.
+## 🛠️ Technology Stack
 
-Microcontroller Firmware: C++ (Arduino Framework).
+- **Hardware:** ESP32-CAM Module, Microcontrollers
+- **Embedded Software:** C++, Arduino IDE
+- **Computer Vision:** YOLOv8 (Ultralytics)
+- **Backend & Processing:** Python, OpenCV
 
-Backend Server: Python 3.x, Flask.
+## ⚙️ System Architecture
 
-Artificial Intelligence: Ultralytics YOLOv8 (Object Detection).
+1. **Image Acquisition:** The ESP32-CAM captures high-framerate video data over a local network connection.
+2. **Data Transmission:** Video frames are transmitted via HTTP/WebSocket protocols to the processing server.
+3. **Real-Time Inference:** A Python backend intercepts the stream, applying a custom-configured YOLOv8 model to identify predefined physical threats or unauthorized entry.
+4. **Alerting Mechanism:** Upon positive detection thresholds, the system triggers subsequent security protocols (e.g., local alarms, network notifications).
 
-Communication Protocol: HTTP POST over WiFi (802.11 b/g/n).
+*Note: Insert a block diagram or flowchart image here if you have one.*
+![System Architecture Diagram](link-to-your-image.png)
 
-How to Run
-Part 1: Start the Server (The Brain)
-Ensure Python is installed on your machine.
+## 📸 Demonstration
 
-Install required libraries: pip install flask ultralytics opencv-python.
+*Highly recommended: Add a GIF or a screenshot showing the YOLOv8 bounding boxes accurately detecting a person/object through the ESP32-CAM feed.*
+![Demo GIF](link-to-your-demo.gif)
 
-Run the server script:
+## 💻 Installation & Setup
 
-Bash
+### Hardware Requirements
 
-python SmartShelf.py
-Ensure the theft_evidence folder exists in the project directory.
+- 1x ESP32-CAM Module
+- FTDI Programmer (for initial flashing)
+- Power Supply (5V/2A recommended for stability during transmission)
 
-Part 2: Deploy the Hardware (The Sentry)
-Open the firmware code in Arduino IDE.
+### Software Deployment
 
-Update the serverName variable with your computer's local IP address (e.g., 10.18.xxx.xxx).
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/zoghby-ctrl/iot-anti-theft.git
+   cd iot-anti-theft
+   ```
 
-Upload the code to the ESP32-CAM (Remember to ground GPIO 0 during upload).
+2. **Flash the ESP32-CAM:**
+   - Open `esp32_camera_server.ino` in the Arduino IDE.
+   - Update your SSID and Password credentials.
+   - Flash the code to the board and retrieve the assigned IP address from the Serial Monitor.
 
-Disconnect the USB and power the board via the 5V/GND pins.
+3. **Setup the Python Environment:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Arming: The system will blink/beep to indicate startup, then enter Deep Sleep. It is now ready to detect theft.
+4. **Run the Inference Engine:**
+   ```bash
+   python main.py --stream_url http://<YOUR_ESP32_IP_ADDRESS>
+   ```
 
-## Team
-**Team Leader:** **Ahmed El-Zoghby**
+## 🧠 Future Optimizations
 
-*Managed a cohort of 28 students divided into Hardware, Software, and AI sub-teams to deliver this integrated system.*
+- Migrating inference to edge devices (e.g., Raspberry Pi or Jetson Nano) to reduce network latency.
+- Implementing facial recognition for whitelisting authorized personnel.
+- Integrating a cloud database for logging historical detection events.
 
-[Click here to watch the project demo](https://vimeo.com/1166679859?fl=ip&fe=ec)
-[Click here to watch the project demo](https://vimeo.com/1166677905?fl=ip&fe=ec)
+## 🤝 Contributors
+
+- **[Your Name/Handle]** - *Project Lead & Core Architect*
+- *With deep gratitude to the 28 dedicated team members who brought this system to life.*
