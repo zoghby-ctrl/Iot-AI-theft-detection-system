@@ -73,7 +73,9 @@ This project was developed at scale. As the **Technical Team Leader**, I archite
 - Implementing facial recognition for whitelisting authorized personnel.
 - Integrating a cloud database for logging historical detection events.
 
-## 🤝 Contributors
+🤝 Contributors
+Ahmed El-Zoghby - Project Lead & Core Architect
 
-- **[Your Name/Handle]** - *Project Lead & Core Architect*
-- *With deep gratitude to the 28 dedicated team members who brought this system to life.*
+Jumana Emad - Co-Lead
+
+With deep gratitude to the 28 dedicated team members who brought this system to life.
