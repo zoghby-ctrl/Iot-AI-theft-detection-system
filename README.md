@@ -30,11 +30,11 @@ This project was developed at scale. As the **Technical Team Leader**, I archite
 3. **Real-Time Inference:** A Python backend intercepts the stream, applying a custom-configured YOLOv8 model to identify predefined physical threats or unauthorized entry.
 4. **Alerting Mechanism:** Upon positive detection thresholds, the system triggers subsequent security protocols (e.g., local alarms, network notifications).
 
-![System Architecture Diagram](link-to-your-image.png)
+![System Architecture Diagram]<img width="1024" height="1536" alt="system_diagram" src="https://github.com/user-attachments/assets/cc68fd09-fffa-47ee-b2ea-c38bf951bc56" />
 
 ## 📸 Demonstration
 
-![Demo GIF](link-to-your-demo.gif)
+[Click here to watch the project demo](https://vimeo.com/1166679859?fl=ip&fe=ec)
 
 ## 💻 Installation & Setup
 
